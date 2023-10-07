@@ -15,9 +15,11 @@ public class Main_802 {
     static int[] q = new int[N];
     static int[] s = new int[N];
 
+    //去重,
     static int unique(List list) {
         int j = 0;
         for (int i = 0; i < list.size() - 1; i++) {
+            //之前有一次排序操作,没有排序操作就不能这么去重(排序之后会将重复的元素给弄到一起去)
             if (i == 0 || list.get(i) != list.get(i - 1)) {
                 list.set(j, list.get(i));
                 j++;

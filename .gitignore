@@ -1,6 +1,8 @@
 /.idea/
 输入模板.txt
 /base/target/
+/base/src/test/
+
 # Compiled class file
 *.class
 
