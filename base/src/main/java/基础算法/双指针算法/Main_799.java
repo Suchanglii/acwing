@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 给一段字符串,计算最大不重复子串长度
+ */
 public class Main_799 {
     static int n;
     static int N = 100010;
