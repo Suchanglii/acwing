@@ -62,9 +62,11 @@ public class Main_802 {
         //对可能要操作的数下标做处理
         Collections.sort(alls);//排序
         int unique = unique(alls);//去重之后,返回去重之后vector应该的长度
-        alls = alls.subList(0, unique);
+        alls = alls.subList(0, unique);//左闭右开的截取,unique方法返回j++也能看出来
+
         //插入
         for (Pair item : add) {
+            //在集合中排第几个,就映射到新数组的第几个(事实上,find返回的时候+1,idx是从1开始的)
             int idx = find(item.first, alls);
             q[idx] += item.second;
         }
@@ -77,7 +79,6 @@ public class Main_802 {
             int l = find(item.first, alls);
             int r = find(item.second, alls);
             System.out.println(s[r] - s[l - 1]);
-
         }
 
     }
