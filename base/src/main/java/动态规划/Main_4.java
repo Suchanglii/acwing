@@ -20,9 +20,9 @@ public class Main_4 {
 //        }
 
         for (int i = 0; i < n; i++) {
-            int s = sc.nextInt();
             int v = sc.nextInt();
             int w = sc.nextInt();
+            int s = sc.nextInt();
             for (int j = m; j >= 0; j--) {
                 for (int k = 1; k <= s && k * v <= j; k++) {
                     f[j] = Math.max(f[j], f[j - k * v] + k * w);
