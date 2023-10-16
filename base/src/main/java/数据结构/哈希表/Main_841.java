@@ -25,8 +25,8 @@ public class Main_841 {
         String ss = bf.readLine();
         p[0] = 1;
         for (int i = 1; i <= n; i++) {
-            p[i] = (p[i - 1] * P) % Q;
-            h[i] = (h[i - 1] * P + ss.charAt(i - 1)) % Q;
+            p[i] = (p[i - 1] * P);
+            h[i] = (h[i - 1] * P + ss.charAt(i - 1));
         }
         while (m-- > 0) {
             s = bf.readLine().split(" ");
