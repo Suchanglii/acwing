@@ -22,7 +22,9 @@ public class Main_5 {
             s = sc.nextInt();
             for (int k = 1; k <= s; k *= 2) {
                 s -= k;
-                goods.add(new Good(k * v, k * w));
+                goods.add(new Good(k * v, k * w));//这里实际上就是将物品打包,
+                //以后我们放物品,就一组一组放,比如以前能拿45个苹果的包,需要拿45次
+                //我们将40个苹果打包成一箱,再拿的时候,就直接拿一箱,再拿5个.
             }
             if (s > 0) goods.add(new Good(s * v, s * w));
         }

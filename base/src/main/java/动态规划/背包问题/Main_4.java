@@ -18,7 +18,8 @@ public class Main_4 {
             int w = sc.nextInt();
             int s = sc.nextInt();
             for (int j = m; j >= 0; j--) {//这里可以看成是多个物品,选育不选,就是01背包了,而不是完全背包
-                for (int k = 0; k <= s && k * v <= j; k++) {
+                for (int k = 0; k <= s && k * v <= j; k++) {//遍历s个物品,k是选取个数
+                    //-------------
                     //f[i][j] = f[i - 1][j];不需要
                     //if (k == 0) f[i][j] = max(f[i - 1][j], f[i - 1][j - k * v[i]] + k * w[i]);
                     //------------------------------
