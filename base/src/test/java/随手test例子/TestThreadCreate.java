@@ -11,18 +11,18 @@ public class TestThreadCreate {
 //        Object o = future.get();
 //        System.out.println(o);
         //2
-//        ExecutorService executor = Executors.newCachedThreadPool();
-//        Task task = new Task();
-//        FutureTask futureTask = new FutureTask(task);
-//        Future<?> future = executor.submit(futureTask);
-//        System.out.println(future.get());
-//        executor.shutdown();
+        ExecutorService executor = Executors.newCachedThreadPool();
+        Task task = new Task();
+        FutureTask futureTask = new FutureTask(task);
+        Future<?> future = executor.submit(futureTask);
+        System.out.println(future.get());
+        executor.shutdown();
 
         //3
-        Task task = new Task();
-        FutureTask<Integer> futureTask = new FutureTask<Integer>(task);
-        Thread thread = new Thread(futureTask);
-        thread.start();
+//        Task task = new Task();
+//        FutureTask<Integer> futureTask = new FutureTask<Integer>(task);
+//        Thread thread = new Thread(futureTask);
+//        thread.start();
 
     }
 
